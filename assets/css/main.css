@@ -1,0 +1,367 @@
+/* Import fonts */
+
+@font-face {
+    font-family: 'Avenir Black', sans-serif;
+    src: url("../fonts/Avenir-Black.ttf");
+}
+@font-face {
+    font-family: 'Avenir Book', sans-serif;
+    src: url("../fonts/Avenir-Book.ttf");
+}
+@font-face {
+    font-family: 'Avenir Medium', sans-serif;
+    src: url("../fonts/Avenir-Medium.ttf");
+}
+
+/* Navbar customization */
+.cbs-navbar {
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none;
+    padding: 35px 77px;
+}
+@media only screen and (max-width: 991px) {
+    .cbs-navbar {
+        background-color: rgba(255, 255, 255, 1);
+        box-shadow: none;
+        padding: 8px 16px;
+    }
+}
+.cbs-navbar .navbar-toggler:focus {
+    outline: 0px;
+}
+.cbs-navbar .navbar-toggler {
+    border: 0px;
+}
+.cbs-navbar .navbar-toggler>.close {
+    display:inline;
+    color: rgb(236, 232, 232);
+}
+.cbs-navbar .navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
+    display:none;
+}
+
+
+/* Navbar links customization */
+.navbar .navbar-nav .nav-link {
+    font-weight: 400;
+    font-family: 'Segoe UI';
+    font-size: 16px;
+    padding: 16px 16px;
+    color: rgba(255, 255, 255, 1);
+}
+@media only screen and (max-width: 991px) {
+    .navbar .navbar-nav .nav-link {
+        color: rgba(0, 0, 0, 0.747);
+    }
+}
+
+.navbar .navbar-nav .nav-link.active {
+    color: #3fce9d;
+}
+.navbar .navbar-nav .nav-link.nav-lang {
+    
+}
+/* @media only screen and (min-width: 992px) {
+    .navbar .navbar-nav .nav-link.active::after {
+        background: rgb(0, 255, 0);
+        bottom: 28px;
+        height: 2px;
+        content: "";
+        padding: 0 22px;
+        position: absolute;
+        width: 0;
+    }
+  } */
+
+.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus{
+    color: #d94800;
+    transition: all 0.5s ease;
+}
+
+/* Change background color of nav on scroll */
+.bg-change {
+    background: #ffffff;
+    transition: background-color 200ms linear;
+}
+.navbar {
+    transition: background-color 200ms linear;
+}
+.navbar.bg-change .navbar-nav .nav-link {
+    color: rgba(0, 0, 0, 0.747);
+}
+.navbar.bg-change .navbar-nav .nav-link.active {
+    color: #FF0000;
+}
+
+/* Logo */
+.cbs-navbar .logo {
+    height: 46px;
+}
+
+/* Header section */
+.header-section {
+    /* padding-top: 60px;
+    height: 100vh; */
+
+    /* background-color: rgba(0, 0, 0, 1); */
+    /* background-image: url(../img/header-img.svg); */
+    /* background-attachment: fixed; */
+
+    /* background-position: center 250px;
+    background-repeat: no-repeat;
+    background-size: 50%; */
+
+    padding-top: 288px;
+    padding-bottom: 232px;
+    position: relative;
+    background-color: black;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+@media only screen and (max-width: 768px) {
+    .header-section {
+        /* padding-top: 60px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 1);
+        background-image: url(../img/header-img.svg);
+        background-attachment: fixed;
+        background-position: center 250px;
+        background-repeat: no-repeat;
+        background-size: 90%; */
+    }
+}
+
+.header-section video {
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.header-section .mainhead-container .head-text {
+    font-weight: 800;
+    font-size: 50px;
+    color: rgba(255, 255, 255, 1);
+    margin-bottom: 30px;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+}
+
+.header-section .bottom-scroll-arrow {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+}
+.header-section .bottom-scroll-arrow a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* About Section ---------------------------------------------- */
+.about-section {
+    padding-top: 100px;
+    padding-bottom: 50px;
+}
+.about-section h1 {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #FF0000;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    text-align: center;
+}
+.about-section h2 {
+    padding: 0 26px;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    line-height: 45px;
+    color: #3a3434;
+    text-align: center;
+}
+
+
+/* Image Section ----------------------------------------- */
+.image-section {
+    padding-left: 100px; 
+    padding-right: 100px; 
+}
+.image-section .inner-background {
+    background-image: url("../img/img1.jpg");
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-size: cover;
+    padding: 250px 125px; 
+}
+
+@media only screen and (max-width: 768px) {
+    .image-section {
+        padding-left: 0px; 
+        padding-right: 0px; 
+    }
+    .image-section .inner-background {
+        padding: 150px 50px; 
+    }
+}
+
+
+/* Main text section--------------------------------------------- */
+.maintext-section {
+    padding-left: 200px;
+    padding-right: 200px;
+}
+.maintext-section .inner-maintext {
+    background-color: #ffffff;
+    padding: 60px 80px 44px 80px;
+    margin-top: -182px;
+}
+.maintext-section .inner-maintext p {
+    color: #3a3434;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+.maintext-section .inner-maintext span {
+    text-decoration: underline;
+}
+
+/* Main text section max width 991px */
+@media only screen and (max-width: 991px) {
+    .maintext-section {
+        padding-left: 170px;
+        padding-right: 170px;
+    }
+    .maintext-section .inner-maintext {
+        background-color: #ffffff;
+        padding: 48px 50px 32px 50px;
+        margin-top: -82px;
+    }
+    .maintext-section .inner-maintext p {
+        color: #3a3434;
+        font-size: 22px;
+    }
+    
+}
+/* Main text section max width 768px */
+@media only screen and (max-width: 768px) {
+    .maintext-section {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+    .maintext-section .inner-maintext {
+        background-color: #ffffff;
+        padding: 38px 40px 22px 40px;
+        margin-top: -82px;
+    }
+    .maintext-section .inner-maintext p {
+        color: #3a3434;
+        font-size: 20px;
+    }
+    
+}
+
+
+/* Card section ------------------------------------------------ */
+.card-section {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 100px; 
+    padding-right: 100px; 
+}
+@media only screen and (max-width: 991px) {
+    .card-section {
+        padding-top: 25px;
+        padding-bottom: 50px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+}
+
+.card-section img {
+    margin-bottom: 5px;
+}
+.card-section h1 {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #FF0000;
+    letter-spacing: 1px;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-align: center;
+}
+.card-section .card {
+    background-color: #808080;
+    padding: 180px 20px 29px 30px;
+    border: 1px solid #808080;
+    border-radius: 0px;
+    margin-bottom: 10px;
+}
+.card-section .card p {
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    color:#ffffff;
+}
+.card-section .card a {
+    text-decoration: underline;
+    color:#ffffff;
+}
+.card-section .view-work {
+    margin-top: 50px;
+    text-align: center;
+}
+.card-section .view-work a {
+    text-decoration: underline;
+    color:#3a3434;
+}
+
+.card-section .return-top {
+    margin-top: 50px;
+    text-align: right;
+}
+.card-section .return-top a {
+    text-decoration: none;
+    color:#3a3434;
+}
+
+/* Foooter section ------------------------------------------------ */
+footer {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 100px; 
+    padding-right: 100px;
+    background: linear-gradient(270deg,#ff43b2,#ffd800);
+    color: #ffffff; 
+}
+footer a {
+    text-decoration: underline;
+    color: #ffffff;
+}
+footer ul {
+    text-align: right;
+}
+footer ul li {
+    display: inline;
+    padding-right: 5px;
+    font-size: 28px;
+}
+footer ul li a {
+    text-decoration: none;
+    color: #ffffff;
+}
+footer a:hover, footer a:focus {
+    color: #ffffff;
+}
