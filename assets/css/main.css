@@ -2,18 +2,32 @@
 
 @font-face {
     font-family: 'Avenir Black', sans-serif;
-    src: url("../fonts/Avenir-Black.ttf");
+    src: url("../font/Avenir-Black.ttf");
 }
 @font-face {
     font-family: 'Avenir Book', sans-serif;
-    src: url("../fonts/Avenir-Book.ttf");
+    src: url("../font/Avenir-Book.ttf");
 }
 @font-face {
     font-family: 'Avenir Medium', sans-serif;
-    src: url("../fonts/Avenir-Medium.ttf");
+    src: url("../font/Avenir-Medium.ttf");
 }
 
-/* Navbar customization */
+/* typesetting */
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+span{
+    font-family: 'Avenir Black', sans-serif;
+}
+
+/* Navbar customization ------------------------------------------------*/
 .cbs-navbar {
     background-color: rgba(255, 255, 255, 0);
     box-shadow: none;
@@ -21,8 +35,6 @@
 }
 @media only screen and (max-width: 991px) {
     .cbs-navbar {
-        background-color: rgba(255, 255, 255, 1);
-        box-shadow: none;
         padding: 8px 16px;
     }
 }
@@ -34,7 +46,7 @@
 }
 .cbs-navbar .navbar-toggler>.close {
     display:inline;
-    color: rgb(236, 232, 232);
+    color: rgba(0, 0, 0, 0.747);
 }
 .cbs-navbar .navbar-toggler.collapsed>.close, .navbar-toggler:not(.collapsed)>.navbar-toggler-icon {
     display:none;
@@ -44,34 +56,19 @@
 /* Navbar links customization */
 .navbar .navbar-nav .nav-link {
     font-weight: 400;
-    font-family: 'Segoe UI';
+    font-family: 'Avenir Book', sans-serif;
     font-size: 16px;
     padding: 16px 16px;
     color: rgba(255, 255, 255, 1);
 }
-@media only screen and (max-width: 991px) {
-    .navbar .navbar-nav .nav-link {
-        color: rgba(0, 0, 0, 0.747);
-    }
-}
+
 
 .navbar .navbar-nav .nav-link.active {
     color: #3fce9d;
 }
 .navbar .navbar-nav .nav-link.nav-lang {
-    
+    font-weight: 600;
 }
-/* @media only screen and (min-width: 992px) {
-    .navbar .navbar-nav .nav-link.active::after {
-        background: rgb(0, 255, 0);
-        bottom: 28px;
-        height: 2px;
-        content: "";
-        padding: 0 22px;
-        position: absolute;
-        width: 0;
-    }
-  } */
 
 .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link:focus{
     color: #d94800;
@@ -98,49 +95,25 @@
     height: 46px;
 }
 
-/* Header section */
+/* Header with video section ---------------------------------*/
 .header-section {
-    /* padding-top: 60px;
-    height: 100vh; */
-
-    /* background-color: rgba(0, 0, 0, 1); */
-    /* background-image: url(../img/header-img.svg); */
-    /* background-attachment: fixed; */
-
-    /* background-position: center 250px;
-    background-repeat: no-repeat;
-    background-size: 50%; */
-
     padding-top: 288px;
     padding-bottom: 232px;
     position: relative;
-    background-color: black;
+    background-color: #000000;
     height: 100vh;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     width: 100%;
     overflow: hidden;
 }
 
-@media only screen and (max-width: 768px) {
-    .header-section {
-        /* padding-top: 60px;
-        height: 100vh;
-        background-color: rgba(0, 0, 0, 1);
-        background-image: url(../img/header-img.svg);
-        background-attachment: fixed;
-        background-position: center 250px;
-        background-repeat: no-repeat;
-        background-size: 90%; */
-    }
-}
 
 .header-section video {
-   
     position: absolute;
     top: 50%;
     left: 50%;
     min-width: 100%;
-    min-height: 100%;
+    /* min-height: 100%; */
     width: auto;
     height: auto;
     z-index: 0;
@@ -149,14 +122,32 @@
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
 }
+@media only screen and (max-width: 768px) {
+    .header-section {
+        height: 500px;
+        padding-top: 230px;
+        padding-bottom: 100px;
+    }
+    .header-section video {
+        height: 500px;
+    }
+}
 
+/* Header text */
 .header-section .mainhead-container .head-text {
-    font-weight: 800;
+    font-weight: 700;
     font-size: 50px;
+    font-family: 'Avenir Black', sans-serif;
     color: rgba(255, 255, 255, 1);
     margin-bottom: 30px;
     letter-spacing: 0.5px;
     line-height: 1.4;
+}
+@media only screen and (max-width: 768px) {
+    .header-section .mainhead-container .head-text {
+        font-weight: 700;
+        font-size: 30px;
+    }
 }
 
 .header-section .bottom-scroll-arrow {
@@ -170,14 +161,17 @@
     font-size: 20px;
 }
 
+
+
 /* About Section ---------------------------------------------- */
 .about-section {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 .about-section h1 {
     font-size: 15px;
     text-transform: uppercase;
+    font-family: 'Avenir Black', sans-serif;
     color: #FF0000;
     letter-spacing: 1px;
     font-weight: bold;
@@ -187,6 +181,7 @@
 .about-section h2 {
     padding: 0 26px;
     font-size: 35px;
+    font-family: 'Avenir Book', sans-serif;
     font-weight: 400;
     letter-spacing: 0.5px;
     line-height: 45px;
@@ -201,7 +196,7 @@
     padding-right: 100px; 
 }
 .image-section .inner-background {
-    background-image: url("../img/img1.jpg");
+    background-image: url("../img/background-img.jpg");
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
@@ -233,6 +228,7 @@
     color: #3a3434;
     font-size: 24px;
     letter-spacing: 0.5px;
+    font-family: 'Avenir Book', sans-serif;
 }
 .maintext-section .inner-maintext span {
     text-decoration: underline;
@@ -297,6 +293,7 @@
 .card-section h1 {
     font-size: 15px;
     text-transform: uppercase;
+    font-family: 'Avenir Black', sans-serif;
     color: #FF0000;
     letter-spacing: 1px;
     font-weight: bold;
@@ -314,10 +311,12 @@
     font-size: 24px;
     letter-spacing: 0.5px;
     color:#ffffff;
+    font-family: 'Avenir Book', sans-serif;
 }
 .card-section .card a {
     text-decoration: underline;
     color:#ffffff;
+    font-family: 'Avenir Book', sans-serif;
 }
 .card-section .view-work {
     margin-top: 50px;
@@ -326,29 +325,38 @@
 .card-section .view-work a {
     text-decoration: underline;
     color:#3a3434;
+    font-family: 'Avenir Book', sans-serif;
 }
-
 .card-section .return-top {
     margin-top: 50px;
     text-align: right;
+    font-family: 'Avenir Book', sans-serif;
+}
+@media only screen and (max-width: 768px) {
+    .card-section .return-top {
+        margin-top: 50px;
+        text-align: center;
+    }
 }
 .card-section .return-top a {
     text-decoration: none;
     color:#3a3434;
+    font-family: 'Avenir Book', sans-serif;
 }
 
-/* Foooter section ------------------------------------------------ */
+/* Footer section ------------------------------------------------ */
 footer {
     padding-top: 25px;
     padding-bottom: 25px;
     padding-left: 100px; 
     padding-right: 100px;
-    background: linear-gradient(270deg,#ff43b2,#ffd800);
+    background: linear-gradient(270deg,#ffd800,#ff43b2);
     color: #ffffff; 
 }
 footer a {
     text-decoration: underline;
     color: #ffffff;
+    font-family: 'Avenir Book', sans-serif;
 }
 footer ul {
     text-align: right;
@@ -360,8 +368,23 @@ footer ul li {
 }
 footer ul li a {
     text-decoration: none;
-    color: #ffffff;
+    color: #fff;
+    font-family: 'Avenir Book', sans-serif;
 }
 footer a:hover, footer a:focus {
     color: #ffffff;
+}
+
+/* Max width 768px for footer */
+@media only screen and (max-width: 768px) {
+    footer {
+        background: linear-gradient(270deg,#a5ff00,#009dff);
+    }
+    footer p{
+        text-align: center;
+    }   
+    footer ul {
+        text-align: center;
+        padding-left: 0;
+    }
 }
