@@ -22,7 +22,7 @@ Frontend-test
 ├── README.md
 ├── LICENSE
 ├── index.html
-└── src
+└── assets
     └── css
     │    └── main.css
     ├── font
@@ -48,4 +48,4 @@ Frontend-test
 
 ## License
 
-Create React App is open source software [licensed as MIT](https://github.com/grimsammie/Frontend-test/blob/master/LICENSE).
+Proximity-test is open source software [licensed as MIT](https://github.com/grimsammie/Frontend-test/blob/master/LICENSE).
